@@ -32,6 +32,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 li {
   list-style-type: none;
 }
@@ -52,6 +53,7 @@ li {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 12px;
 }
 
 .text--purple {
@@ -68,6 +70,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 12px;
 }
 
 .nav__link--list {
@@ -119,6 +122,7 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
 }
+
 .about-me__info--container {
   display: flex;
   flex-direction: column;
@@ -135,6 +139,20 @@ section:nth-child(even) {
   border-radius: 15%;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  margin-bottom: 28px;
+  animation: animate-profile-priture 200ms ease backwards;
+}
+
+@keyframes animate-profile-priture {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .about-me__picture {
@@ -147,10 +165,17 @@ section:nth-child(even) {
 
 .about-me__info--title {
   margin-bottom: 16px;
+  animation: fade-up 400ms ease backwards;
 }
+
 .about-me__info--para {
   font-size: 20px;
   margin-bottom: 28px;
+  animation: fade-up 600ms ease backwards;
+}
+
+.about-me__links {
+  animation: fade-up 800ms ease backwards;
 }
 
 .about _me__link {
@@ -159,13 +184,35 @@ section:nth-child(even) {
   padding: 0 16px;
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about-me__img--container {
   flex: 1;
   display: flex;
   align-items: center;
 }
+
 .about-me__img {
   width: 100%;
+  animation: fade-in 1200ms 800ms backwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .general-sherman {
@@ -203,6 +250,7 @@ section:nth-child(even) {
 
 .language__list {
   display: flex;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -245,6 +293,11 @@ section:nth-child(even) {
   overflow: hidden;
   position: relative;
 }
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
 .project__wrapper img {
   width: 100%;
   max-width: 500px;
@@ -286,6 +339,7 @@ section:nth-child(even) {
 .project__list {
   padding-top: 40px;
 }
+
 .project__description {
   position: absolute;
   top: 50%;
@@ -303,6 +357,7 @@ section:nth-child(even) {
   font-size: 40px;
   margin: 16px 0;
 }
+
 .project__description--link {
   font-size: 20px;
   margin-right: 16px;
@@ -328,6 +383,8 @@ footer {
 }
 
 .footer__social--list {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   gap: 16px;
