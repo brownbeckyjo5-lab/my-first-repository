@@ -117,7 +117,7 @@ section:nth-child(even) {
 
 /*ABOUT ME */
 
-#ABOUT-ME {
+#about-me {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -377,7 +377,7 @@ section:nth-child(even) {
 .project__description--para,
 .project__description--link {
   text-align: left;
-  color: white;
+  color: rgb(244, 247, 245);
 }
 
 /* FOOTER */
