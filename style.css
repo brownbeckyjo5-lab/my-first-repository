@@ -173,9 +173,6 @@ section:nth-child(even) {
   animation: fade-up 600ms ease backwards;
 }
 
-.about-me__links {
-  animation: fade-up 800ms ease backwards;
-}
 .container { /* not .coctainer */
   padding: 50px 0;
 }
@@ -184,6 +181,10 @@ section:nth-child(even) {
   font-size: 20px;
   color: #242424;
   padding: 0 16px;
+}
+
+.about-me__links {
+  animation: fade-up 800ms ease backwards;
 }
 
 @keyframes fade-up {
